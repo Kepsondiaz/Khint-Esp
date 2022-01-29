@@ -1,0 +1,34 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  nav{
+      display: flex;
+      justify-content: space-around;
+  }
+.main{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+div .uplader
+{
+  border: 1em;
+  padding-left: 50px;
+}
+.space-form{
+  padding-top: 20px;
+  padding-bottom:20px ;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
