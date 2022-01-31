@@ -27,6 +27,9 @@ div .uplader
   padding-left: 50px;
   padding-right: 50px;
 }
+.citation{
+  padding-top:20px ;
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;

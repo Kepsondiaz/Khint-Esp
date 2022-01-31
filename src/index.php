@@ -19,19 +19,19 @@
 <body class="d-flex flex-column h-100">
     
     <header >
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">KhintEsp</a>
+          <a class="navbar-brand" href="#">MyKhintEsp</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Uploader Un Fichier</a>
+                <a class="nav-link " aria-current="page" href="index.php">Uploader Un Fichier</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="public_khint_esp.php">Voir Les Fichiers</a>
+                <a class="nav-link active" href="public_khint_esp.php">Voir Les Fichiers</a>
               </li>
             </ul>
             <!--
@@ -44,8 +44,10 @@
         </div>
       </nav>
     </header>
-    <main class="main shadow-none p-3 mb-5 bg-light rounded-3 ">
-
+    <main class="main shadow p-3 mb-5 bg-body rounded ">
+        <div class="fst-italic shadow p-3 mb-5 bg-primary rounded text-light">
+          <h6>MykhintEsp partager l'excellence entre polytechniciens</h6>
+        </div>
         <form action="pass.php" method="POST" enctype="multipart/form-data" class="space-form">
     <!--   <select name="niveau" id="" required>
                 <option value="">Selectionner un niveau</option>
@@ -72,13 +74,15 @@
             </select>
             <br>
             <div class="input-group mb-3 ">
-                <input type="file" class="form-control" id="inputGroupFile02" name="fichier" value="uploader un fichier" required>
-                <input type="submit" value="uploader" class="input-group-text bg-blue-300 button" for="inputGroupFile02" name="upload">
+                <input type="file" class="form-control" id="inputGroupFile02" name="fichier" required>
+            </div>
+            <div class>
+            <input type="submit" value="uploader" class="input-group-text bg-primary button text-light" for="inputGroupFile02" name="upload">
             </div>
         </form>
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3 bg-primary">
       <div class="container">
         <strong class="text-muted">KhintEsp © 2022</strong>
       </div>

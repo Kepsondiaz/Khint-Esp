@@ -9,7 +9,7 @@ include "uploader.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <title>KhintEsp</title>
+      <title>MyKhintEsp</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
     <link href="style.css" rel="stylesheet">
@@ -17,7 +17,7 @@ include "uploader.php";
 <body class="d-flex flex-column h-100">
     
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">KhintEsp</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,11 +44,11 @@ include "uploader.php";
     </header>
     
     <main class="main">
-    <button class="input-group-text"  ><a class="text-decoration-none" href="public_khint_esp.php">voir les Fichiers</a></button>
+    <button class="input-group-text bg-primary"  ><a class="text-decoration-none text-light " href="public_khint_esp.php">voir les Fichiers Uploader</a></button>
     </main>
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3 bg-primary">
       <div class="container">
-        <strong class="text-muted">KhintEsp © 2022</strong>
+        <strong class="text-muted text-white">KhintEsp © 2022</strong>
       </div>
     </footer>
       <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
