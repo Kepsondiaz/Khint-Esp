@@ -18,9 +18,8 @@
     $file_tmp_name = $_FILES["fichier"]["tmp_name"];
     $niveau=$_POST["niveau"];
     $cours=$_POST["cours"];
-    //var_dump($methode);
     $file_public ='../Public/'.$file_name;
-    $extension_autorisees = array(".pdf", ".PDF", ".docx", ".txt", ".html", ".c", ".java", ".sql");
+    $extension_autorisees = array(".pdf", ".PDF", ".zip");
 
     if (in_array($file_extension, $extension_autorisees))
     {
@@ -30,10 +29,11 @@
             $req->execute(array($niveau, $cours,  $file_name, $file_public));
             //echo "fichier uploader avec succé....";
         }
-        else
-            echo "<div class=alert alert-danger role=alert>";
-            echo "Cet Extension n'est pas autrisé !";
-            echo "</div>";
+
+    }
+    else
+    {
+        echo "Cet Extension n'est pas autrisé !";
     }
 
         

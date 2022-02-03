@@ -1,0 +1,22 @@
+Il ya deux types de clients de messagerie: un client lourd et un client léger.
+Dans la configuration de postfix, il ya un paramètre important qui est :
+inet_interfaces qu'on doit mettre à all pour permettre au serveur postfix d'écouter sur toutes les adresses IP qu'il a.
+Ensuite il faut redémarrer postfix pour que le nouveau paramètre soit pris en compte avec la commande service postfix restart.
+Les différentes étapes de configuration de roundcube:
+	-héberger le code rouncube sur un serveur web
+	-paramétrer rouncube en tant que client de messagerie
+D'habitude quand on héberge un site web par dossier, on crée un sous-dossier dans le dossier /var/www/html et on y place le contenu du site.
+Pour accéder à un tel site, on saisit dans un navigateur l'@IP_du_serveur/nom_sous-dossier. 
+Or dans le cas de roundcube, est-ce que le dossier ne se trouve pas dans /var/www/html. Donc on utilise le paramètre d'apache2 Alias pour dire que si quelqu'un saisit l'@IP/rouncube, il ne faut pas aller chercher le dossier dans rouncube dans /var/www/html mais il faut dans le dossier /var/lib/roundcube
+Alias /roundcube /var/lib/roundcube
+Quand on configure un client de messagerie, quels sont les paramètres qu'on doit lui préciser?
+Pour qu'un client de messagerie puisse envoyer un mail, faudrait qu'il ait l'@ de son serveur SMTP et son port d'écoute.
+Pour qu'un client de messagerie puisse recevoir un mail, il faut lui préciser le protocole à utiliser et l'@ du serveur IMAP et son port si on a choisi IMAP comme protocole ou l'@ du serveur POP et son port si on a choisi POP comme protocole de réception.
+Remarque: dans le cas d'un Webmail(un client de messagerie qu'on héberge dans le web, exemple : roundcube), le protocole de réception de mail adapté est IMAP
+Remarque: Certains serveurs smtp exigent qu'un client de messagerie doit fournir un login et un mot de passe avant d'envoyer un mail. 
+	Dans notre cas, nous n'avons pas paramétré postfix pour exiger un login et un mot de passe au client de messagerie. 
+	C'est pourquoi nous n'avons pas renseigner le paramètre $config["smtp_user"] et le paramètre $config["smtp_pass"]
+Attention: Comme dans le paramètre $config['default_host']= 'esp.sn'; il faut donc faire la correspondance entre l'@IP du serveur IMAP et le nom esp.sn .
+	Comme nous n'avons pas encore de serveur DNS, linux permet de faire une correspondance locale entre une @IP et des noms dans le fichier /etc/hosts
+	Synthaxe: IP nom1 nom2...
+Nous voulons que les utilisateurs accèdent en saisissant l'URL mail.esp.sn   
