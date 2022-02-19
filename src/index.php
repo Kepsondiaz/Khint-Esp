@@ -1,8 +1,4 @@
-<?php
-    include "connect_db.php";
-    include "uploader.php";
-    //include "public_khint_esp.php"; 
-?>
+
 
 <!doctype html>
 <html lang="en" class="h-100">
@@ -50,7 +46,7 @@
         <div class="fst-italic shadow p-3 mb-5 bg-primary rounded text-light">
           <h6>HINTSxHINTS partager l'excellence entre polytechniciens</h6>
         </div>
-        <form action="pass.php" method="POST" enctype="multipart/form-data" class="space-form">
+        <form action="uploader.php" method="POST" enctype="multipart/form-data" class="space-form">
     <!--   <select name="niveau" id="" required>
                 <option value="">Selectionner un niveau</option>
                 <option value="DSTI1-DUT1">DSTI1-DUT1</option>
