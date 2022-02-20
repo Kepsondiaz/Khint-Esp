@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,10 @@
     
 </body>
 </html>
+=======
+>>>>>>> master
 <?php
+    include "connect_db.php";
     $file_name = $_FILES["fichier"]["name"];
     $file_extension = strrchr($file_name, ".");
     $file_tmp_name = $_FILES["fichier"]["tmp_name"];
@@ -36,10 +40,14 @@
             //echo "fichier uploader avec succé....";
         }
 
+        header("Location: pass.php");
+        // Rediriger vers passs.php
     }
     else
     {
-        echo "Cet Extension n'est pas autrisé !";
+        echo "<h3>";
+        echo "Vous ne pouvez pas uploader un fichier de type : ".  $file_extension;
+        echo "</h3>";
     }
 
         
