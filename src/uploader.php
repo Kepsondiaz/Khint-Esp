@@ -22,7 +22,9 @@
     }
     else
     {
-        echo "Cet Extension n'est pas autrisé !";
+        echo "<h3>";
+        echo "Vous ne pouvez pas uploader un fichier de type : ".  $file_extension;
+        echo "</h3>";
     }
 
         
