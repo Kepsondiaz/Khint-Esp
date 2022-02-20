@@ -18,7 +18,6 @@ $methode= $_SERVER["REQUEST_METHOD"];
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>HINTSxHINTS</title>
-<<<<<<< HEAD
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
     <link href="style.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -30,10 +29,6 @@ $methode= $_SERVER["REQUEST_METHOD"];
   </head>
 <body class="d-flex flex-column h-100">
     
-=======
-</head>
-<body>
->>>>>>> master
     <header >
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
             <div class="container-fluid">
