@@ -8,23 +8,24 @@
     $file_public ='../public/'.$file_name;
     $extension_autorisees = array(".pdf", ".PDF", ".zip");
 
+
     if (in_array($file_extension, $extension_autorisees))
     {
         if(move_uploaded_file($file_tmp_name, $file_public))
         {
             $req=$conn->prepare('insert into EspKhints (niveau, cours, nom, file_url) values(?, ?, ?, ?)');
             $req->execute(array($niveau, $cours,  $file_name, $file_public));
+            // Rediriger vers passs.php
+            header("Location: pass.php");
+            exit();
             //echo "fichier uploader avec succé....";
         }
-
-        header("Location: pass.php");
-        // Rediriger vers passs.php
+        
     }
     else
     {
-        echo "<h3>";
-        echo "Vous ne pouvez pas uploader un fichier de type : ".  $file_extension;
-        echo "</h3>";
+        header("Location: pass1.php");
+        exit();
     }
 
         
